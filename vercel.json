@@ -1,15 +1,15 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "app.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/callback",
-      "dest": "/app.py"
-    }
-  ]
-}
+    "version": 2,
+    "builds": [
+        {
+            "src": "wps_callback_handler.py",
+            "use": "@vercel/python"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/wps/callback",
+            "dest": "wps_callback_handler.py"
+        }
+    ]
+}    
