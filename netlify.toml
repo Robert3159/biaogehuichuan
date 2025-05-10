@@ -1,0 +1,7 @@
+[build]
+  command = "pip install -r requirements.txt && gunicorn app:app"
+  publish = "/"
+  functions = "netlify-functions"
+
+[context.production.environment]
+  FLASK_ENV = "production"
